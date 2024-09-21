@@ -58,7 +58,11 @@ config :scrum_poker, ScrumPokerWeb.Endpoint,
     patterns: [
       ~r"priv/static/(?!uploads/).*(js|css|png|jpeg|jpg|gif|svg)$",
       ~r"priv/gettext/.*(po)$",
-      ~r"lib/scrum_poker_web/(controllers|live|components)/.*(ex|heex)$"
+      ~r"lib/scrum_poker_web/(controllers|live|components)/.*(ex|heex)$",
+      ~r"lib/scrum_poker_web/(live|components)/.*neex$",
+      ~r"lib/counter_web/styles/.*ex$",
+      ~r"priv/static/*.styles$",
+      ~r"lib/scrum_poker_web/styles/*.ex$"
     ]
   ]
 
@@ -83,3 +87,7 @@ config :phoenix_live_view,
 
 # Disable swoosh api client as it is only required for production adapters.
 config :swoosh, :api_client, false
+
+config :live_view_native_stylesheet,
+  annotations: true,
+  pretty: true

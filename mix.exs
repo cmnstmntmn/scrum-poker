@@ -55,7 +55,11 @@ defmodule ScrumPoker.MixProject do
       {:gettext, "~> 0.20"},
       {:jason, "~> 1.2"},
       {:dns_cluster, "~> 0.1.1"},
-      {:bandit, "~> 1.5"}
+      {:bandit, "~> 1.5"},
+      {:live_view_native, "~> 0.3.0"},
+      {:live_view_native_stylesheet, "~> 0.3.0"},
+      {:live_view_native_swiftui, "~> 0.3.0"},
+      {:live_view_native_live_form, "~> 0.3.0"}
     ]
   end
 
