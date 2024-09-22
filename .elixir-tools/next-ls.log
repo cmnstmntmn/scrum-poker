@@ -196,3 +196,63 @@ MIX_ARCHIVES=/Users/cmnstmntmn/.cache/elixir-tools/nextls/elixir/1-17-1/.mix/arc
 23:08:40.071 id=15 [debug] handled request client -> server textDocument/hover in 1001ms
 
 23:10:26.650 [debug] handled notification client -> server textDocument/didSave in 9ms
+
+23:51:39.199 id=16 [debug] handled request client -> server textDocument/codeAction in 56ms
+
+23:51:40.213 [error] ** (Protocol.UndefinedError) protocol Enumerable not implemented for :timeout of type Atom. This protocol is implemented for the following type(s): DBConnection.PrepareStream, DBConnection.Stream, Date.Range, Exqlite.Stream, File.Stream, Function, GenEvent.Stream, HashDict, HashSet, IO.Stream, Jason.OrderedObject, List, Map, MapSet, Range, Stream
+    (elixir 1.17.2) lib/enum.ex:1: Enumerable.impl_for!/1
+    (elixir 1.17.2) lib/enum.ex:166: Enumerable.reduce/3
+    (elixir 1.17.2) lib/enum.ex:4423: Enum.reject/2
+    (next_ls 0.23.2) lib/next_ls.ex:244: NextLS.handle_request/2
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:350: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.2.1) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:321: :telemetry.span/3
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:349: anonymous fn/7 in GenLSP.loop/3
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:553: GenLSP.attempt/4
+
+
+23:51:40.213 [debug] sent notification server -> client window/logMessage
+
+23:51:40.218 [debug] handled notification client -> server textDocument/didChange in 3ms
+
+23:51:40.218 [debug] handled notification client -> server $/cancelRequest in 16µs
+
+23:51:40.218 id=18 [debug] handled request client -> server textDocument/codeAction in 95µs
+
+23:51:40.576 [debug] handled notification client -> server textDocument/didChange in 1ms
+
+23:51:40.836 id=19 [debug] handled request client -> server textDocument/codeAction in 117µs
+
+23:51:41.343 [debug] handled notification client -> server textDocument/didChange in 326µs
+
+23:51:41.603 id=20 [debug] handled request client -> server textDocument/codeAction in 128µs
+
+23:51:46.020 [error] ** (Protocol.UndefinedError) protocol Enumerable not implemented for :timeout of type Atom. This protocol is implemented for the following type(s): DBConnection.PrepareStream, DBConnection.Stream, Date.Range, Exqlite.Stream, File.Stream, Function, GenEvent.Stream, HashDict, HashSet, IO.Stream, Jason.OrderedObject, List, Map, MapSet, Range, Stream
+    (elixir 1.17.2) lib/enum.ex:1: Enumerable.impl_for!/1
+    (elixir 1.17.2) lib/enum.ex:166: Enumerable.reduce/3
+    (elixir 1.17.2) lib/enum.ex:4423: Enum.reject/2
+    (next_ls 0.23.2) lib/next_ls.ex:244: NextLS.handle_request/2
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:350: anonymous fn/2 in GenLSP.loop/3
+    (telemetry 1.2.1) /Users/runner/work/next-ls/next-ls/deps/telemetry/src/telemetry.erl:321: :telemetry.span/3
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:349: anonymous fn/7 in GenLSP.loop/3
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:553: GenLSP.attempt/4
+
+
+23:51:46.020 [debug] sent notification server -> client window/logMessage
+
+23:51:47.034 [error] ** (CaseClauseError) no case clause matching: :timeout
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:353: anonymous fn/7 in GenLSP.loop/3
+    (gen_lsp 0.10.0) lib/gen_lsp.ex:553: GenLSP.attempt/4
+    (stdlib 6.0) proc_lib.erl:329: :proc_lib.init_p_do_apply/3
+
+
+23:51:47.034 [debug] sent notification server -> client window/logMessage
+
+23:51:47.034 [debug] handled notification client -> server $/cancelRequest in 20µs
+
+23:51:47.048 [debug] handled notification client -> server textDocument/didSave in 683µs
+
+23:51:47.090 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 3ms
+
+23:52:50.485 id=23 [debug] handled request client -> server textDocument/hover in 1002ms
+
+23:52:50.485 [debug] handled notification client -> server $/cancelRequest in 113µs
