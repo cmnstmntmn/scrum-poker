@@ -16,3 +16,183 @@
 23:03:17.050 [info] [extension] Credo initializing with options %NextLS.InitOpts.Extensions.Credo{enable: true, cli_options: []}
 
 23:03:17.050 id=34 [debug] sent request server -> client client/registerCapability
+
+23:03:18.552 [debug] sent notification server -> client window/logMessage
+
+23:03:18.552 [debug] Booting runtimes...
+
+23:03:18.555 id=1609 [debug] sent request server -> client window/workDoneProgress/create
+
+23:03:18.562 [debug] sent notification server -> client $/progress
+
+23:03:18.582 [debug] sent notification server -> client window/logMessage
+
+23:03:18.582 [info] Beginning DB migration...
+
+23:03:18.587 [debug] sent notification server -> client window/logMessage
+
+23:03:18.587 [info] Database is being upgraded from version 0 to 7.
+
+This will trigger a full recompilation in order to re-index your codebase.
+
+
+23:03:18.587 [debug] sent notification server -> client window/logMessage
+
+23:03:18.587 [info] Finished DB migration...
+
+23:03:18.587 [debug] sent notification server -> client window/logMessage
+
+23:03:18.587 [info] Booting runtime for .
+
+- elixir: /Users/cmnstmntmn/.cache/elixir-tools/nextls/elixir/1-17-1/bin/elixir
+- zombie wrapper script: /Users/cmnstmntmn/Library/Application Support/.burrito/next_ls_erts-15.0_0.23.2/lib/next_ls-0.23.2/priv/cmd
+- working_dir: /Users/cmnstmntmn/projects/scrum_poker
+- command: /Users/cmnstmntmn/.cache/elixir-tools/nextls/elixir/1-17-1/bin/elixir --no-halt --sname nextls-runtime-1727035398587834333 --cookie Z4ER2X2KFNZWMEC65F5SIBKLBWALO6AXJYUMIFNSO6GV3FRQKUZA==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3Jm5leHQtbHMtMTcyNzAzNTM5NjkyNjcxMTgzM0Bjb25zdGFudGluAAAA2gAAAABm8HgF
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/Users/cmnstmntmn/.cache/elixir-tools/nextls/elixir/1-17-1/bin:/Users/cmnstmntmn/Library/Application Support/.burrito/next_ls_erts-15.0_0.23.2/bin:/Users/cmnstmntmn/.local/share/mise/installs/elixir/1.15.5-otp-25/bin:/Users/cmnstmntmn/.local/share/mise/installs/elixir/1.15.5-otp-25/.mix/escripts:/Users/cmnstmntmn/.local/share/mise/installs/erlang/latest/bin:/Users/cmnstmntmn/.local/share/mise/installs/node/latest/bin:/Users/cmnstmntmn/Library/pnpm:/Users/cmnstmntmn/.local/bin:/opt/homebrew/sbin:/opt/homebrew/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin
+MIX_HOME=/Users/cmnstmntmn/.cache/elixir-tools/nextls/elixir/1-17-1/.mix
+MIX_ARCHIVES=/Users/cmnstmntmn/.cache/elixir-tools/nextls/elixir/1-17-1/.mix/archives
+
+
+23:03:18.588 [debug] handled notification client -> server initialized in 1542ms
+
+23:03:18.591 [debug] handled notification client -> server workspace/didChangeConfiguration in 3ms
+
+23:03:18.593 [debug] handled notification client -> server textDocument/didOpen in 2ms
+
+23:03:18.594 [debug] handled notification client -> server textDocument/didOpen in 328µs
+
+23:03:18.594 [debug] handled notification client -> server textDocument/didOpen in 39µs
+
+23:03:18.594 [debug] handled notification client -> server textDocument/didOpen in 332µs
+
+23:03:18.594 [debug] handled notification client -> server textDocument/didOpen in 191µs
+
+23:03:18.594 [debug] handled notification client -> server textDocument/didOpen in 29µs
+
+23:03:18.594 [debug] handled notification client -> server textDocument/didOpen in 86µs
+
+23:03:18.595 [debug] handled notification client -> server textDocument/didOpen in 56µs
+
+23:03:18.595 [debug] handled notification client -> server textDocument/didOpen in 198µs
+
+23:03:18.595 [debug] handled notification client -> server textDocument/didOpen in 228µs
+
+23:03:18.598 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 2ms
+
+23:03:18.600 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 2ms
+
+23:03:18.912 [debug] sent notification server -> client window/logMessage
+
+23:03:18.912 [debug] sent notification server -> client $/progress
+
+23:03:18.912 [debug] Unchecked dependencies for environment dev:
+
+
+23:03:18.913 [debug] sent notification server -> client window/logMessage
+
+23:03:18.913 [error] Runtime for folder  failed to initialize
+
+23:03:18.913 [debug] sent notification server -> client window/logMessage
+
+23:03:18.913 [info] Booting runtime for .
+
+- elixir: /Users/cmnstmntmn/.cache/elixir-tools/nextls/elixir/1-17-1/bin/elixir
+- zombie wrapper script: /Users/cmnstmntmn/Library/Application Support/.burrito/next_ls_erts-15.0_0.23.2/lib/next_ls-0.23.2/priv/cmd
+- working_dir: /Users/cmnstmntmn/projects/scrum_poker
+- command: /Users/cmnstmntmn/.cache/elixir-tools/nextls/elixir/1-17-1/bin/elixir --no-halt --sname nextls-runtime-1727035398913720875 --cookie Z4ER2X2KFNZWMEC65F5SIBKLBWALO6AXJYUMIFNSO6GV3FRQKUZA==== -S mix loadpaths --no-compile
+
+Environment: 
+
+LSP=nextls
+NEXTLS_PARENT_PID=g1h3Jm5leHQtbHMtMTcyNzAzNTM5NjkyNjcxMTgzM0Bjb25zdGFudGluAAAA2gAAAABm8HgF
+MIX_ENV=dev
+MIX_TARGET=host
+MIX_BUILD_ROOT=.elixir-tools/_build
+ROOTDIR=false
+BINDIR=false
+RELEASE_ROOT=false
+RELEASE_SYS_CONFIG=false
+PATH=/Users/cmnstmntmn/.cache/elixir-tools/nextls/elixir/1-17-1/bin:/Users/cmnstmntmn/Library/Application Support/.burrito/next_ls_erts-15.0_0.23.2/bin:/Users/cmnstmntmn/.local/share/mise/installs/elixir/1.15.5-otp-25/bin:/Users/cmnstmntmn/.local/share/mise/installs/elixir/1.15.5-otp-25/.mix/escripts:/Users/cmnstmntmn/.local/share/mise/installs/erlang/latest/bin:/Users/cmnstmntmn/.local/share/mise/installs/node/latest/bin:/Users/cmnstmntmn/Library/pnpm:/Users/cmnstmntmn/.local/bin:/opt/homebrew/sbin:/opt/homebrew/bin:/Library/Frameworks/Python.framework/Versions/3.12/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin
+MIX_HOME=/Users/cmnstmntmn/.cache/elixir-tools/nextls/elixir/1-17-1/.mix
+MIX_ARCHIVES=/Users/cmnstmntmn/.cache/elixir-tools/nextls/elixir/1-17-1/.mix/archives
+
+
+23:03:18.914 [debug] sent notification server -> client window/logMessage
+
+23:03:18.914 [error] The runtime for  has crashed with reason: {:shutdown, :unchecked_dependencies}
+
+23:03:18.915 [debug] sent notification server -> client window/logMessage
+
+23:03:18.915 [info] The runtime for  has successfully shut down.
+
+23:03:18.915 [debug] sent notification server -> client window/logMessage
+
+23:03:18.915 [info] Client does not support window/showMessageRequest
+
+23:03:21.163 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 398µs
+
+23:03:24.264 [debug] handled notification client -> server workspace/didChangeWatchedFiles in 3002ms
+
+23:07:17.095 id=2 [debug] handled request client -> server textDocument/hover in 1016ms
+
+23:07:17.097 [debug] handled notification client -> server $/cancelRequest in 1ms
+
+23:07:24.479 id=3 [debug] handled request client -> server textDocument/hover in 1000ms
+
+23:07:31.359 id=4 [debug] handled request client -> server textDocument/hover in 1000ms
+
+23:07:31.359 [debug] handled notification client -> server $/cancelRequest in 77µs
+
+23:07:33.202 id=5 [debug] handled request client -> server textDocument/hover in 1000ms
+
+23:07:33.203 [debug] handled notification client -> server $/cancelRequest in 93µs
+
+23:07:34.204 id=6 [debug] handled request client -> server textDocument/hover in 1000ms
+
+23:07:34.204 [debug] handled notification client -> server $/cancelRequest in 49µs
+
+23:07:35.204 id=7 [debug] handled request client -> server textDocument/hover in 1000ms
+
+23:07:35.204 [debug] handled notification client -> server $/cancelRequest in 42µs
+
+23:07:36.205 id=8 [debug] handled request client -> server textDocument/hover in 1000ms
+
+23:07:36.205 [debug] handled notification client -> server $/cancelRequest in 50µs
+
+23:07:51.755 id=9 [debug] handled request client -> server textDocument/hover in 1002ms
+
+23:07:51.755 [debug] handled notification client -> server $/cancelRequest in 55µs
+
+23:07:53.454 id=10 [debug] handled request client -> server textDocument/hover in 1000ms
+
+23:07:53.454 [debug] handled notification client -> server $/cancelRequest in 87µs
+
+23:08:12.812 id=11 [debug] handled request client -> server textDocument/hover in 1001ms
+
+23:08:12.812 [debug] handled notification client -> server $/cancelRequest in 67µs
+
+23:08:15.068 id=12 [debug] handled request client -> server textDocument/hover in 1000ms
+
+23:08:15.069 [debug] handled notification client -> server $/cancelRequest in 269µs
+
+23:08:24.082 id=13 [debug] handled request client -> server textDocument/hover in 1003ms
+
+23:08:24.082 [debug] handled notification client -> server $/cancelRequest in 160µs
+
+23:08:32.786 id=14 [debug] handled request client -> server textDocument/hover in 1000ms
+
+23:08:40.071 id=15 [debug] handled request client -> server textDocument/hover in 1001ms
+
+23:10:26.650 [debug] handled notification client -> server textDocument/didSave in 9ms
