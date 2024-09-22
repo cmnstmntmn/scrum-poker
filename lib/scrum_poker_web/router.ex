@@ -24,6 +24,7 @@ defmodule ScrumPokerWeb.Router do
 
     # get "/", PageController, :home
     live "/", HomeLive
+    live "/:room", HomeLive
   end
 
   # Other scopes may use custom stacks.

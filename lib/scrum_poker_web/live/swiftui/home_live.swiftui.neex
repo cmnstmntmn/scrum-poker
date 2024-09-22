@@ -1,3 +1,80 @@
-<VStack>
-    <Text>Test</Text>
+<VStack class="page">
+    <HStack class="pad">
+      <.icon class="icon" name="dice.fill" />
+      <Text class="title">Scrum Poker</Text>
+      <Spacer />
+      <Text :if={@current_user}>Hey, <%= @current_user %>!</Text>
+    </HStack>
+
+    <Spacer :if={!@joined}/>
+    <LiveForm :if={!@joined} id="lobby" class="form" id="user-form" phx-change="update" phx-submit="join">
+      <VStack>
+        <HStack><Text>Room ID</Text><Spacer /></HStack>
+        <.input name="room" id="room" label="Room" placeholder="Room ID" value={@room_id} class="field" type="TextField" />
+      </VStack>
+
+      <VStack class="field-group">
+        <HStack><Text>Name</Text><Spacer /></HStack>
+        <.input name="name" id="name" label="Name" placeholder="Name" value={@current_user} class="field" type="TextField" />
+      </VStack>
+
+      <Toggle class="toggler" isOn={@spectator} name="spectator">
+          Join as spectator
+      </Toggle>
+
+      <LiveSubmitButton :if={@room_id != nil && @current_user != nil} class="button" type="submit" disabled={@current_user === nil} phx-disable-with="Joining...">
+        Join
+      </LiveSubmitButton>
+    </LiveForm>
+
+    <VStack :if={@joined}>
+      <VStack class="pad">
+      <HStack class="head" alignment="top">
+        <VStack alignment="leading">
+          <Text>Users</Text>
+          <HStack id={user_id} :for={{user_id, meta} <- @users}>
+            <.icon class={"status-icon " <> if meta.voted, do: "voted", else: "not-voted"} name={if meta.voted, do: "checkmark.circle.fill", else: "circle.fill"} />
+            <Text><%= meta.username %> <%=  %></Text>
+            <Text if={@result}><%= meta.vote %></Text>
+          </HStack>
+        </VStack>
+        <Spacer />
+        <VStack>
+          <.icon :if={!@result} class="loader" name="clock.arrow.trianglehead.2.counterclockwise.rotate.90" />
+          <Text class="round-result" :if={@result}><%= @result %></Text>
+          <%!-- <Button phx-click="reset" :if={@result}><.icon name="arrow.clockwise" /> Reset</Button> --%>
+        </VStack>
+      </HStack>
+      <Spacer />
+      <VStack>
+        <HStack>
+          <VStack phx-click="select" phx-value-vote={value} class={"card " <> if (value === @vote), do: "bg-selected", else: "bg-unselected"} id={value} :for={value <- ["0", "1", "2"]}>
+            <Text><%= value %></Text>
+          </VStack>
+        </HStack>
+
+        <HStack>
+          <VStack phx-click="select" phx-value-vote={value} class={"card " <> if (value === @vote), do: "bg-selected", else: "bg-unselected"} id={value} :for={value <- ["3", "5", "8"]}>
+            <Text><%= value %></Text>
+          </VStack>
+        </HStack>
+      </VStack>
+
+      <Text class="pad">
+        <.icon name="info.circle" />
+        The results will appear automatically after all the participants have voted.</Text>
+      </VStack>
+    </VStack>
+
+    <Spacer />
+
+    <HStack class="pad footer">
+      <VStack>
+        <HStack>
+          <Text>Created with Live View Native</Text>
+          <.icon class="footer-icon" name="heart.fill" />
+        </HStack>
+        <Text>@cmnstmntmn</Text>
+      </VStack>
+    </HStack>
 </VStack>

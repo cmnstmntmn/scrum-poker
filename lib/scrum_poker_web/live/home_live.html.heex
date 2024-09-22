@@ -1,1 +1,78 @@
-Test
+
+    <div class="flex w-full justify-between items-center">
+      <h1 class="title text-2xl mb-4">Scrum Poker</h1>
+      <span :if={@current_user}>Hey, <%= @current_user %>!</span>
+    </div>
+
+    <form id="form" :if={!@joined} phx-change="update" phx-submit="join">
+      <div>
+      <p>
+        <label for="room">Room ID</label>
+        <.input id="room" name="room" placeholder="Room ID" value={@room_id} type="text" />
+      </p>
+
+      <p>
+        <label for="name">Name</label>
+        <.input id="name" name="name" placeholder="Name" value={@current_user} type="text" />
+      </p>
+
+      <p>
+        <label for="spectator">Join as spectator</label>
+        <.input id="spectator" name="spectator" type="checkbox" checked={@spectator} />
+      </p>
+
+      <button :if={@room_id != nil && @current_user != nil} class="bg-black text-white rounded px-4 py-2 mt-2" type="submit" disabled={@current_user === nil} phx-disable-with="Joining...">
+        Join
+      </button>
+      </div>
+    </form>
+
+    <div :if={@joined}>
+      <div class="mt-6">
+        <div class="flex justify-between">
+          <div>
+            <h2>Users</h2>
+            <ol>
+              <li id={user_id} :for={{user_id, meta} <- @users}>
+                <span class={"status-icon inline-block h-2 w-2 rounded-full " <> if meta.voted, do: "bg-green-400", else: "bg-rose-400"}></span>
+                <strong><%= meta.username %> <%=  %></strong>
+                <span if={@result} class="text-sm text-gray-500"><%= meta.vote %></span>
+              </li>
+            </ol>
+          </div>
+
+          <div>
+            <h2 class="round-result text-2xl">
+              <span :if={!@result} class="text-sm">Waiting...</span>
+              <span class="text-yellow-400 text-2x font-bold" :if={@result}><%= @result %></span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-4 mx-auto mt-4">
+          <div class="flex gap-4">
+            <div phx-click="select" phx-value-vote={value} class={"shadow-sm p-4 cursor-pointer " <> if (value === @vote), do: "bg-yellow-300", else: "bg-gray-300"} id={value} :for={value <- ["0", "1", "2"]}>
+              <span><%= value %></span>
+            </div>
+          </div>
+
+          <div class="flex gap-4">
+            <div phx-click="select" phx-value-vote={value} class={"shadow-sm p-4 cursor-pointer " <> if (value === @vote), do: "bg-yellow-300", else: "bg-gray-300"} id={value} :for={value <- ["3", "5", "8"]}>
+              <span><%= value %></span>
+            </div>
+          </div>
+        </div>
+
+      <p class="text-sm text-gray-500 mt-4">
+        The results will appear automatically after each user has been voted.
+      </p>
+
+      </div>
+    </div>
+
+    <footer class="footer mt-6 opacity-50">
+        <p>
+          <span>Created with Live View Native</span><br />
+          <small>@cmnstmntmn</small>
+        </p>
+    </footer>

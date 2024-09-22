@@ -11,6 +11,7 @@ defmodule ScrumPoker.Application do
       ScrumPokerWeb.Telemetry,
       {DNSCluster, query: Application.get_env(:scrum_poker, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: ScrumPoker.PubSub},
+      ScrumPokerWeb.Presence,
       # Start the Finch HTTP client for sending emails
       {Finch, name: ScrumPoker.Finch},
       # Start a worker by calling: ScrumPoker.Worker.start_link(arg)

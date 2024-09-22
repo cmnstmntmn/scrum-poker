@@ -60,7 +60,7 @@ config :scrum_poker, ScrumPokerWeb.Endpoint,
       ~r"priv/gettext/.*(po)$",
       ~r"lib/scrum_poker_web/(controllers|live|components)/.*(ex|heex)$",
       ~r"lib/scrum_poker_web/(live|components)/.*neex$",
-      ~r"lib/counter_web/styles/.*ex$",
+      ~r"lib/scrum_poker_web/styles/.*ex$",
       ~r"priv/static/*.styles$",
       ~r"lib/scrum_poker_web/styles/*.ex$"
     ]
